@@ -2,7 +2,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-     this is test
+     <h2>this is make for gallery exam</h2>
     </div>
   )
 }
