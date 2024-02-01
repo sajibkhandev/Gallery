@@ -1,9 +1,33 @@
 import React from 'react'
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider
+} from "react-router-dom";
+import Registration from './pages/Registration';
+import Login from './pages/Login';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+   <>
+    <Route
+      path="/"
+      element={<Registration />}>
+    </Route>
+    <Route
+      path="/login"
+      element={<Login />}>
+    </Route>
+   
+   </>
+  )
+);
 const App = () => {
+ 
   return (
     <div>
-     <h2>this is make for gallery exam</h2>
-     
+   <RouterProvider router={router} />
     </div>
   )
 }
